@@ -8,9 +8,9 @@ This solution is a simple prototype, designed specifically to meet the requireme
 AWS S3, IAM, Snowflake
 
 ### Files Included
-DATA_INGESTION.sql : This script serves as the core solution to demonstrate how semi-structured data can be ingested, parsed, and made analytics-ready using SQL.
+Sf_DataIngestion.sql : This script serves as the core solution to demonstrate how semi-structured data can be ingested, parsed, and made analytics-ready using SQL.
 
-data_analysis.sql (Optional): This optional script showcases how the flattened taxonomy data can be used for generating insights.
+DataAnalysis.sql (Optional): This optional script showcases how the flattened taxonomy data can be used for generating insights.
 
 ### Steps Overview 
 1. Create Storage Integration
