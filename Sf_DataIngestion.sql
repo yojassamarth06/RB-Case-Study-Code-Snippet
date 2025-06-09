@@ -21,9 +21,9 @@ CREATE OR REPLACE STAGE customer_stage
 -- Step 4: List files in the stage to verify S3 connectivity
 LIST @customer_stage;
 
--- Step 5: Define a file format for JSON data loading
-CREATE OR REPLACE FILE FORMAT my_json_format
-  TYPE = 'JSON';
+-- Step 5: Define a file format for JSON data loading (Optional)
+-- CREATE OR REPLACE FILE FORMAT my_json_format
+  -- TYPE = 'JSON';
 
 -- Step 6: Create a table to store JSON asset metadata taxonomy
 CREATE OR REPLACE TABLE asset_metadata_taxonomy (
