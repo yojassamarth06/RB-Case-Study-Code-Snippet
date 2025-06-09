@@ -55,7 +55,7 @@ WITH tree_flattened AS (
     tree_item.value:depth::INT AS tree_depth
   FROM asset_metadata_taxonomy t,
        LATERAL FLATTEN(input => t.tree) AS tree_item
-  WHERE t.option_id = 'TO-242WBGGCW1W11'
+  -- WHERE t.option_id = 'TO-242WBGGCW1W11' -- This is for validation purpose
 ),
 
 -- Step 10: Extract the `sap` value from the metadata array for the same option ID
@@ -66,7 +66,7 @@ sap_extracted AS (
   FROM asset_metadata_taxonomy t,
        LATERAL FLATTEN(input => t.metadata) AS md
   WHERE md.value:key::STRING = 'sap'
-    AND t.option_id = 'TO-242WBGGCW1W11'
+    -- AND t.option_id = 'TO-242WBGGCW1W11' -- This is for validation purpose
 )
 
 -- Step 11: Aggregate the tree path and join with extracted sap value
